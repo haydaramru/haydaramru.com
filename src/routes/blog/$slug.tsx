@@ -15,7 +15,7 @@ function BlogPost() {
     <Container>
       <Link
         to="/blog"
-        className="text-sm text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 mb-8"
+        className="text-base text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1 mb-8"
       >
         <ArrowLeft className="size-3" /> Back to writing
       </Link>
