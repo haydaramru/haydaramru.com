@@ -1,6 +1,7 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
+import { Navbar } from '@/components/shared/navbar'
 
 import appCss from '../styles.css?url'
 
@@ -15,7 +16,7 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'TanStack Start Starter',
+        title: 'Haydar Amru',
       },
     ],
     links: [
@@ -26,6 +27,7 @@ export const Route = createRootRoute({
     ],
   }),
   shellComponent: RootDocument,
+  component: RootLayout,
 })
 
 function RootDocument({ children }: { children: React.ReactNode }) {
@@ -50,5 +52,21 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
+  )
+}
+
+function RootLayout() {
+  return (
+    <div className="min-h-screen flex flex-col bg-background text-foreground">
+      <Navbar />
+      <main className="flex-1 py-12">
+        <Outlet />
+      </main>
+      <footer className="py-6">
+        <p className="text-sm text-muted-foreground text-center">
+          &copy; {new Date().getFullYear()} Haydar Amru
+        </p>
+      </footer>
+    </div>
   )
 }
