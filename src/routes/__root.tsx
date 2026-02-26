@@ -2,6 +2,7 @@ import { HeadContent, Outlet, Scripts, createRootRoute } from '@tanstack/react-r
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { Navbar } from '@/components/shared/navbar'
+import { TooltipProvider } from '@/components/ui/tooltip'
 
 import appCss from '../styles.css?url'
 
@@ -20,7 +21,7 @@ export const Route = createRootRoute({
       },
     ],
     links: [
-      {
+{
         rel: 'stylesheet',
         href: appCss,
       },
@@ -57,16 +58,18 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
 function RootLayout() {
   return (
-    <div className="min-h-screen flex flex-col bg-background text-foreground">
-      <Navbar />
-      <main className="flex-1 py-12">
-        <Outlet />
-      </main>
-      <footer className="py-6">
-        <p className="text-sm text-muted-foreground text-center">
-          &copy; {new Date().getFullYear()} Haydar Amru
-        </p>
-      </footer>
-    </div>
+    <TooltipProvider delayDuration={150}>
+      <div className="min-h-screen flex flex-col bg-background text-foreground">
+        <Navbar />
+        <main className="flex-1 pt-16 pb-6">
+          <Outlet />
+        </main>
+        <footer className="py-6 mb-16">
+          <p className="text-base text-muted-foreground text-center">
+            &copy; {new Date().getFullYear()} Haydar Amru
+          </p>
+        </footer>
+      </div>
+    </TooltipProvider>
   )
 }
