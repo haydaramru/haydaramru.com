@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
-import { House, Pen, FolderOpen, Github, Linkedin, Mail, Sun } from "lucide-react";
+import { House, Pen, FolderOpen, Github, Linkedin, Mail, Sun, Moon } from "lucide-react";
+import { useTheme } from "@/components/shared/theme-provider";
 import { Tooltip, TooltipContent, TooltipTrigger } from "@/components/ui/tooltip";
 
 const linkClass =
@@ -18,6 +19,9 @@ const socialLinks = [
 ] as const;
 
 export function Navbar() {
+  const { theme, toggleTheme } = useTheme();
+  const ThemeIcon = theme === "dark" ? Moon : Sun;
+
   return (
     <header className="fixed bottom-4 left-1/2 -translate-x-1/2 z-50">
       <nav className="flex items-center gap-1 rounded-full border border-border bg-background/80 backdrop-blur-md px-3 py-1.5 shadow-sm text-muted-foreground hover:gap-4 hover:px-5 transition-all duration-300 ease-out">
@@ -59,12 +63,12 @@ export function Navbar() {
 
         <Tooltip>
           <TooltipTrigger asChild>
-            <button className={linkClass} aria-label="Toggle theme">
-              <Sun className="size-4" />
+            <button className={linkClass} aria-label="Toggle theme" onClick={toggleTheme}>
+              <ThemeIcon className="size-4" />
             </button>
           </TooltipTrigger>
           <TooltipContent side="top" sideOffset={8}>
-            Theme
+            {theme === "dark" ? "Light mode" : "Dark mode"}
           </TooltipContent>
         </Tooltip>
       </nav>

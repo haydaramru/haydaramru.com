@@ -35,7 +35,7 @@ function HomePage() {
         </h1>
       </section>
 
-      <section className="mb-10 space-y-4 text-base leading-relaxed">
+      <section className="mb-10 space-y-4 text-base text-muted-foreground leading-relaxed">
         <p>
           learning through tinkering (and losing to rabbit holes) by diving into projects that solve "interesting" problems.
         </p>

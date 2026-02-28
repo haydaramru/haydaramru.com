@@ -3,6 +3,7 @@ import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { Navbar } from '@/components/shared/navbar'
 import { TooltipProvider } from '@/components/ui/tooltip'
+import { ThemeProvider } from '@/components/shared/theme-provider'
 
 import appCss from '../styles.css?url'
 
@@ -38,6 +39,11 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `(function(){try{var t=localStorage.getItem("theme");if(t==="dark"||(!t&&window.matchMedia("(prefers-color-scheme:dark)").matches)){document.documentElement.classList.add("dark")}}catch(e){}})()`,
+          }}
+        />
         {children}
         <TanStackDevtools
           config={{
@@ -58,6 +64,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
 
 function RootLayout() {
   return (
+    <ThemeProvider>
     <TooltipProvider delayDuration={150}>
       <div className="min-h-screen flex flex-col bg-background text-foreground">
         <Navbar />
@@ -71,5 +78,6 @@ function RootLayout() {
         </footer>
       </div>
     </TooltipProvider>
+    </ThemeProvider>
   )
 }
