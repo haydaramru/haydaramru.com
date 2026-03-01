@@ -1,0 +1,8 @@
+services:
+  haydaramru-com:
+    image: haydaramru/haydaramru.com:latest
+    restart: unless-stopped
+    ports:
+      - "2602:2602"
+    environment:
+      - NODE_ENV=production
