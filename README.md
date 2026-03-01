@@ -182,6 +182,48 @@ function PeopleComponent() {
 
 Loaders simplify your data fetching logic dramatically. Check out more information in the [Loader documentation](https://tanstack.com/router/latest/docs/framework/react/guide/data-loading#loader-parameters).
 
+# Deployment
+
+The site is deployed via Docker + GitHub Actions to a VPS, with Nginx as reverse proxy and Cloudflare for SSL/CDN.
+
+## Pipeline
+
+Push to `main` → GitHub Actions builds Docker image → pushes to Docker Hub → SSHs into VPS → pulls and restarts container.
+
+## Required GitHub Secrets
+
+| Secret | Description |
+|--------|-------------|
+| `DOCKER_USERNAME` | Docker Hub username |
+| `DOCKER_PASSWORD` | Docker Hub access token |
+| `VPS_HOST` | VPS IP address or hostname |
+| `VPS_USER` | SSH user on VPS |
+| `VPS_SSH_KEY` | Private SSH key for VPS access |
+
+## VPS Setup
+
+1. Install Docker and Docker Compose
+2. Create `~/haydaramru.com/` and copy `docker-compose.yml` into it
+3. Copy `nginx/haydaramru.com` to `/etc/nginx/sites-available/` and symlink to `sites-enabled/`
+4. Add the deploy SSH public key to `~/.ssh/authorized_keys`
+5. `sudo nginx -t && sudo systemctl reload nginx`
+
+## Cloudflare Setup
+
+- DNS A record with orange-cloud proxy enabled
+- SSL/TLS mode: **Full (Strict)**
+- Cache Rule: `/_build/*` → Edge TTL 1 month
+- Enable Brotli compression
+
+## Rollback
+
+```bash
+# On VPS, roll back to a specific commit sha:
+docker compose down
+sed -i 's/:latest/:COMMIT_SHA/' docker-compose.yml
+docker compose pull && docker compose up -d
+```
+
 # Demo files
 
 Files prefixed with `demo` can be safely deleted. They are there to provide a starting point for you to play around with the features you've installed.

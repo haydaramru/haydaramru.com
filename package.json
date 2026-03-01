@@ -10,7 +10,8 @@
     "build": "bun --bun vite build",
     "serve": "bun --bun vite preview",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "start": "bun server.ts"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
