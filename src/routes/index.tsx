@@ -41,13 +41,10 @@ function HomePage() {
       <MotionReveal delay={0.1}>
         <section className="mb-10 space-y-4 text-base text-muted-foreground leading-relaxed">
           <p>
-            learning through tinkering (and losing to rabbit holes) by diving into projects that solve "interesting" problems.
+            i enjoy learning through tinkering (and losing to rabbit holes) by diving into projects that solve "interesting" problems.
           </p>
           <p>
-            i build clean things with code and lead teams when needed.
-          </p>
-          <p>
-            i keep notes on what i'm building and breaking{' '}
+            i build clean things with code and keep notes on what i'm building or breaking{' '}
             <Link to="/blog" className="underline hover:text-foreground transition-colors">here</Link>.
           </p>
         </section>
