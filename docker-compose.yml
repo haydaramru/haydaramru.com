@@ -4,5 +4,7 @@ services:
     restart: unless-stopped
     ports:
       - "2602:2602"
+    volumes:
+      - ./ssl:/etc/ssl/cloudflare:ro
     environment:
       - NODE_ENV=production

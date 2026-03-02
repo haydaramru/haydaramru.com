@@ -4,7 +4,10 @@ upstream haydaramru_app {
 }
 
 server {
-    listen 2602;
+    listen 2602 ssl;
+
+    ssl_certificate     /etc/ssl/cloudflare/cert.pem;
+    ssl_certificate_key /etc/ssl/cloudflare/key.pem;
     server_name haydaramru.com www.haydaramru.com;
 
     gzip on;
