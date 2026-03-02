@@ -18,11 +18,15 @@ export const Route = createRootRoute({
         content: 'width=device-width, initial-scale=1',
       },
       {
-        title: 'Haydar Amru',
+        title: 'Haydar Amru Revanda',
       },
     ],
     links: [
-{
+      {
+        rel: 'icon',
+        href: '/favicon.ico',
+      },
+      {
         rel: 'stylesheet',
         href: appCss,
       },
