@@ -5,7 +5,7 @@ COPY package.json bun.lock ./
 RUN bun install --frozen-lockfile
 COPY . .
 RUN bun run build
-RUN bun build server.ts --outfile dist/entry.js --target bun --external "./dist/server/server.js"
+RUN bun build server.ts --outfile dist/entry.js --target bun --external "./server/server.js"
 
 # Stage 2: runner — nginx + bun in one container
 FROM oven/bun:1-alpine

@@ -1,8 +1,9 @@
 import { join } from "path";
 
-const distDir = join(import.meta.dir, "dist", "client");
+// Paths are relative to the bundled output at dist/entry.js
+const distDir = join(import.meta.dir, "client");
 
-const server = await import("./dist/server/server.js");
+const server = await import("./server/server.js");
 const handler = server.default;
 
 Bun.serve({
