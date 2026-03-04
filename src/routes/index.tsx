@@ -140,7 +140,13 @@ function HomePage() {
               <li>
                 <div className="flex items-start justify-between">
                   <div>
-                    <p className="font-medium text-lg">{project.title}</p>
+                    <Link
+                      to="/projects/$id"
+                      params={{ id: project.id }}
+                      className="font-medium text-lg hover:underline"
+                    >
+                      {project.title}
+                    </Link>
                     <p className="text-base text-muted-foreground mt-1">
                       {project.description}
                     </p>
@@ -157,15 +163,17 @@ function HomePage() {
                         <Github className="size-4" />
                       </a>
                     )}
-                    <a
-                      href={project.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-muted-foreground hover:text-foreground transition-colors"
-                      aria-label="Live site"
-                    >
-                      <ExternalLink className="size-4" />
-                    </a>
+                    {project.url && (
+                      <a
+                        href={project.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-muted-foreground hover:text-foreground transition-colors"
+                        aria-label="Live site"
+                      >
+                        <ExternalLink className="size-4" />
+                      </a>
+                    )}
                   </div>
                 </div>
                 <div className="flex gap-2 mt-2">

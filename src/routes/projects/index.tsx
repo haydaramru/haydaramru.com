@@ -1,4 +1,4 @@
-import { createFileRoute } from '@tanstack/react-router'
+import { createFileRoute, Link } from '@tanstack/react-router'
 import { Container } from '@/components/shared/container'
 import { MotionReveal } from '@/components/shared/motion-reveal'
 import { getProject } from '@/server/project'
@@ -23,7 +23,13 @@ function ProjectsIndex() {
             <li>
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="font-medium">{project.title}</p>
+                  <Link
+                    to="/projects/$id"
+                    params={{ id: project.id }}
+                    className="font-medium hover:underline"
+                  >
+                    {project.title}
+                  </Link>
                   <p className="text-sm text-muted-foreground mt-1">
                     {project.description}
                   </p>
@@ -40,15 +46,17 @@ function ProjectsIndex() {
                       <Github className="size-4" />
                     </a>
                   )}
-                  <a
-                    href={project.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-muted-foreground hover:text-foreground transition-colors"
-                    aria-label="Live site"
-                  >
-                    <ExternalLink className="size-4" />
-                  </a>
+                  {project.url && (
+                    <a
+                      href={project.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Live site"
+                    >
+                      <ExternalLink className="size-4" />
+                    </a>
+                  )}
                 </div>
               </div>
               <div className="flex gap-2 mt-2">
