@@ -84,48 +84,9 @@ function HomePage() {
       </MotionReveal> */}
 
       <section className="mb-10">
-        <MotionReveal delay={0.3}>
-          <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-semibold">Recent Writing</h2>
-            <Link
-              to="/blog"
-              className="text-base text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
-            >
-              All posts <ArrowRight className="size-3" />
-            </Link>
-          </div>
-        </MotionReveal>
-        <ul className="space-y-6">
-          {posts.slice(0, 3).map((post, index) => (
-            <MotionReveal key={post.slug} delay={0.3 + index * 0.08}>
-              <li>
-                <Link
-                  to="/blog/$slug"
-                  params={{ slug: post.slug }}
-                  className="group block"
-                >
-                  <div className="flex items-baseline justify-between">
-                    <p className="font-medium group-hover:underline">
-                      {post.title}
-                    </p>
-                    <span className="text-base text-muted-foreground shrink-0 ml-4">
-                      {post.date}
-                    </span>
-                  </div>
-                  <p className="text-base text-muted-foreground mt-1">
-                    {post.excerpt}
-                  </p>
-                </Link>
-              </li>
-            </MotionReveal>
-          ))}
-        </ul>
-      </section>
-
-      <section>
         <MotionReveal delay={0.4}>
           <div className="flex items-center justify-between mb-6">
-            <h2 className="text-xl font-semibold">Featured Projects</h2>
+            <h2 className="text-xl font-semibold">Featured Works</h2>
             <Link
               to="/projects"
               className="text-base text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
@@ -186,6 +147,45 @@ function HomePage() {
                     </span>
                   ))}
                 </div>
+              </li>
+            </MotionReveal>
+          ))}
+        </ul>
+      </section>
+
+      <section>
+        <MotionReveal delay={0.3}>
+          <div className="flex items-center justify-between mb-6">
+            <h2 className="text-xl font-semibold">Recent Writing</h2>
+            <Link
+              to="/blog"
+              className="text-base text-muted-foreground hover:text-foreground transition-colors inline-flex items-center gap-1"
+            >
+              All posts <ArrowRight className="size-3" />
+            </Link>
+          </div>
+        </MotionReveal>
+        <ul className="space-y-6">
+          {posts.slice(0, 3).map((post, index) => (
+            <MotionReveal key={post.slug} delay={0.3 + index * 0.08}>
+              <li>
+                <Link
+                  to="/blog/$slug"
+                  params={{ slug: post.slug }}
+                  className="group block"
+                >
+                  <div className="flex items-baseline justify-between">
+                    <p className="font-medium group-hover:underline">
+                      {post.title}
+                    </p>
+                    <span className="text-base text-muted-foreground shrink-0 ml-4">
+                      {post.date}
+                    </span>
+                  </div>
+                  <p className="text-base text-muted-foreground mt-1">
+                    {post.excerpt}
+                  </p>
+                </Link>
               </li>
             </MotionReveal>
           ))}
