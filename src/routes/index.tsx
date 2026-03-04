@@ -1,21 +1,22 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Container } from '@/components/shared/container'
+import { ScrambleText } from '@/components/shared/scramble-text'
 import { MotionReveal } from '@/components/shared/motion-reveal'
 import { getPosts } from '@/server/blog'
 import { getProject } from '@/server/project'
 import { ArrowRight, ExternalLink, Github } from 'lucide-react'
-import {
-  SiTypescript,
-  SiReact,
-  SiTailwindcss,
-  SiNodedotjs,
-  SiBun,
-  SiGo,
-  SiPostgresql,
-  SiDocker,
-  SiGit,
-} from 'react-icons/si'
-import type { IconType } from 'react-icons'
+// import {
+//   SiTypescript,
+//   SiReact,
+//   SiTailwindcss,
+//   SiNodedotjs,
+//   SiBun,
+//   SiGo,
+//   SiPostgresql,
+//   SiDocker,
+//   SiGit,
+// } from 'react-icons/si'
+// import type { IconType } from 'react-icons'
 
 export const Route = createFileRoute('/')({
   loader: async () => {
@@ -31,10 +32,15 @@ function HomePage() {
   return (
     <Container>
       <MotionReveal>
-        <section className="mb-10">
+        <section className="mb-6">
+          <p className="mb-2">Hello, my name is</p>
           <h1 className="text-4xl font-semibold tracking-tight mb-3">
-            Hello, I'm Haydar
+            Haydar Amru
           </h1>
+          <p>
+            Building solutions that feel{' '}
+            <ScrambleText words={['reliable', 'secure', 'seamless', 'scalable', 'intuitive']} />{' '}
+          </p>
         </section>
       </MotionReveal>
 
@@ -50,7 +56,7 @@ function HomePage() {
         </section>
       </MotionReveal>
 
-      <MotionReveal delay={0.2}>
+      {/* <MotionReveal delay={0.2}>
         <section className="mb-10">
           <h2 className="text-xl font-bold mb-4">Tools & Technologies</h2>
           <div className="flex flex-wrap gap-2">
@@ -75,7 +81,7 @@ function HomePage() {
             ))}
           </div>
         </section>
-      </MotionReveal>
+      </MotionReveal> */}
 
       <section className="mb-10">
         <MotionReveal delay={0.3}>
