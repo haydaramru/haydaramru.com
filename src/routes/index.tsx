@@ -34,7 +34,7 @@ function HomePage() {
       <MotionReveal>
         <section className="mb-6">
           <p className="mb-2">Hello, my name is</p>
-          <h1 className="text-4xl font-semibold tracking-tight mb-3">
+          <h1 className="text-4xl font-black tracking-tight mb-3">
             Haydar Amru
           </h1>
           <p>
