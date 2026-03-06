@@ -50,8 +50,8 @@ function HomePage() {
             i enjoy learning through tinkering (and losing to rabbit holes) by diving into projects that solve "interesting" problems.
           </p>
           <p>
-            i build clean things with code and keep notes on what i'm building or breaking{' '}
-            <Link to="/blog" className="underline hover:text-foreground transition-colors">here</Link>.
+            i build clean things with code and keep notes on what i'm building or breaking on my{' '}
+            <Link to="/blog" className="underline hover:text-foreground transition-colors">blog</Link>.
           </p>
         </section>
       </MotionReveal>
