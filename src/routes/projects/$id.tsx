@@ -60,7 +60,7 @@ function ProjectDetail() {
           </div>
         </header>
         <div className="prose prose-neutral">
-          <p>{project.content}</p>
+          <div dangerouslySetInnerHTML={{ __html: project.content }} />
         </div>
       </article>
     </Container>

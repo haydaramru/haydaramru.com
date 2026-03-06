@@ -25,7 +25,7 @@ function BlogPost() {
           <time className="text-sm text-muted-foreground">{post.date}</time>
         </header>
         <div className="prose prose-neutral">
-          <p>{post.content}</p>
+          <div dangerouslySetInnerHTML={{ __html: post.content }} />
         </div>
       </article>
     </Container>
