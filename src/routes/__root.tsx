@@ -20,6 +20,10 @@ export const Route = createRootRoute({
       {
         title: 'Haydar Amru Revanda',
       },
+      {
+        name: 'description',
+        content: 'Personal website of Haydar Amru Revanda — building clean digital experiences with code. Blog, projects, and notes on what I\'m building and breaking.',
+      },
     ],
     links: [
       {
