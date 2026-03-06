@@ -4,6 +4,7 @@ dist
 .output
 .tanstack
 .env
-*.md
+README.md
+CLAUDE.md
 .DS_Store
 .github
