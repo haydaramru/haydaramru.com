@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://haydaramru.com/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/blog</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/blog/hello-world</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/blog/effect-ts</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/projects</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/projects/1</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/projects/2</loc>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://haydaramru.com/projects/3</loc>
+    <priority>0.6</priority>
+  </url>
+</urlset>
