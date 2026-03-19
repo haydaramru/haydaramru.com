@@ -59,7 +59,7 @@ function ProjectDetail() {
             </div>
           </div>
         </header>
-        <div className="prose prose-neutral">
+        <div className="prose prose-neutral dark:prose-invert">
           <div dangerouslySetInnerHTML={{ __html: project.content }} />
         </div>
       </article>
