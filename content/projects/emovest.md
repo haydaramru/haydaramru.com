@@ -4,21 +4,10 @@ description: A vest prototype as an epilepsy detector with airguard protection b
 tech:
   - C++
   - Arduino
-url: https://github.com/haydaramru/EMOvest
+url:
 repo: https://github.com/haydaramru/EMOvest
 published: true
 ---
-<div align="center">
-    <div>
-      <h4><b>Program Kreativitas Mahasiswa Karsa Cipta (PKM-KC) 2024 Skema Pendanaan - Diktiristek</b></h3>
-    </div>      
-</div>
-<div align="center">
-  <h1> EMO-vest </h1>
-  <p> Vest as Epilepsy Detector with Airguard Protecting Based on IoT </p>
-</div>
-<br>
-
 EMO-vest facilitates emergency assistance for epilepsy patients while also providing protection to reduce the risk of injury during seizures. Its development also promotes the use of the Internet of Things (IoT) to advance science and technology in the healthcare field.
 
 ## 📌 Summary
@@ -27,10 +16,10 @@ Epilepsy is a neurological condition characterized primarily by seizures and sud
 
 ## 🎥 Presentation Video
 
-<a href="https://youtu.be/NROLJrA94yM?si=lKHp4SmtjSQQmYMZ"><img src="assets/video-presentasi-thumbnail.jpg" /></a>
+<a href="https://youtu.be/NROLJrA94yM?si=lKHp4SmtjSQQmYMZ"><img src="https://raw.githubusercontent.com/haydaramru/EMOvest/main/assets/video-presentasi-thumbnail.jpg" /></a>
 
 ## 📸 Documentation
-![EMOvest](assets/emovest.jpeg)
+![EMOvest](https://raw.githubusercontent.com/haydaramru/EMOvest/main/assets/emovest.jpeg)
 
 ## 👥 Contributors
 - Frengki Prabowo Saputro Wijayanto
