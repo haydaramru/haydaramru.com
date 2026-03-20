@@ -27,3 +27,6 @@ GymLens is a mobile app that categorizes gym equipment and provides detailed usa
 
 </div>
 
+
+## Project Architecture
+![GymLens](https://raw.githubusercontent.com/GymLens/.github/main/profile/assets/project-architecture.png)
