@@ -1,7 +1,7 @@
 ---
 title: I Stopped Manually Syncing My Dotfiles
 date: 2026-03-12
-excerpt: If you've ever set up a new machine and spent an hour recreating your `.zshrc` from memory, then chezmoi is for you.
+excerpt:
 published: true
 ---
 So a few weeks ago I set up a fresh machine and spent like an hour recreating my `.zshrc` from memory. I've been copy-pasting aliases from old logs, re-adding PATH exports, googling stuff I know I've configured before. Halfway through I just sat there thinking, "why didn't I write this down somewhere?"
