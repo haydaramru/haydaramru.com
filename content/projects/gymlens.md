@@ -1,9 +1,14 @@
 ---
 title: GymLens
 description: A mobile app that categorizes gym equipment and provides detailed usage guides.
-tech: [GCP, Golang, Flask, Kotlin]
-url: https://github.com/GymLens/
+tech:
+  - GCP
+  - Golang
+  - Flask
+  - Kotlin
+url:
 published: true
+repo: https://github.com/GymLens/
 ---
 ## About this project
 In Indonesia, many people are unaware of the importance of regular exercise for maintaining health. According to Stanford University (CNN Indonesia, 2022), Indonesia ranks first in malas gerak (‘_mager_’—lazy to exercise) 😴, with rising obesity rates 📊—21.8% in 2018 (up from 14.8% in 2013). This leads to weight gain and an increased risk of heart disease ❤️‍🩹.
