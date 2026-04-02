@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from '@tanstack/react-router'
 import { Container } from '@/components/shared/container'
-import { ScrambleText } from '@/components/shared/scramble-text'
+// import { ScrambleText } from '@/components/shared/scramble-text'
 import { MotionReveal } from '@/components/shared/motion-reveal'
 import { getPosts } from '@/server/blog'
 import { getProject } from '@/server/project'
@@ -38,8 +38,9 @@ function HomePage() {
             Haydar Amru
           </h1>
           <p>
-            Building solutions that feel{' '}
-            <ScrambleText words={['reliable', 'secure', 'seamless', 'scalable', 'intuitive']} />{' '}
+            {/* Building solutions that feel{' '}
+            <ScrambleText words={['reliable', 'secure', 'seamless', 'scalable', 'intuitive']} />{' '} */}
+            I'm a Product Engineer
           </p>
         </section>
       </MotionReveal>
